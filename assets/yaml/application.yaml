@@ -1,0 +1,3 @@
+database:
+  connection:
+    url: postgres://postgres:i0907r@127.0.0.1:5432/livespace?sslmode=disable
