@@ -8,9 +8,9 @@ import (
 )
 
 func Connect(connectionConfig *config.DbConnectionConfig) (db *sqlx.DB, err error) {
-	log.Info("Connecting to db " + *&connectionConfig.Url)
+	log.Info("Connecting to db " + connectionConfig.Url)
 
-	db, err = sqlx.Connect("pgx", *&connectionConfig.Url)
+	db, err = sqlx.Connect("pgx", connectionConfig.Url)
 	if err != nil {
 		return nil, err
 	}
